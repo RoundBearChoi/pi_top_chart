@@ -1,7 +1,7 @@
 import yfinance as yf
 import matplotlib.colors as nclrs
 import matplotlib.pyplot as plt
-import logging as lg
+import logging as log
 import math
 
 from datetime import date
@@ -18,16 +18,16 @@ def run():
     btc[str(quick) + '_MA'] = btc['Close'].rolling(window=quick).mean()
 
     # Create a logger
-    lg.basicConfig(filename='matplotlib_styles.log', level=lg.INFO, filemode='w')
+    log.basicConfig(filename='matplotlib_styles.log', level=log.INFO, filemode='w')
 
     # Log background styles
     styles = plt.style.available
-    lg.info('Available styles in Matplotlib: %s', styles)
+    log.info('Available styles in Matplotlib: %s', styles)
 
     # Log named colors
     colors = nclrs.CSS4_COLORS
     for color_name in colors:
-        lg.info('Color name: %s, RGB value: %s', color_name, colors[color_name])
+        log.info('Color name: %s, RGB value: %s', color_name, colors[color_name])
 
     # Plot the closing price and the moving average
     plt.style.use ('fivethirtyeight')
