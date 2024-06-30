@@ -1,6 +1,7 @@
 import yfinance as yf
 import matplotlib.colors as nclrs
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import logging as log
 import math
 
@@ -41,6 +42,10 @@ def run():
     plt.ylabel('Price (USD)')
     plt.grid(False)
     plt.legend()
+
+    ax = plt.gca()
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: format(int(x), ',')))
+
     plt.show()
 
 
