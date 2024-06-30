@@ -24,7 +24,7 @@ def run():
     plt.figure(figsize=(14, 7))
     plt.plot(btc['Close'], label='Bitcoin', linewidth=0.7)
     plt.plot(btc['365_MA'], label='365-day MA', linewidth=0.7)
-    plt.title('Bitcoin Price with 365-day Moving Average')
+    plt.title('BTC Moving Averages')
     plt.xlabel('Date')
     plt.ylabel('Price (USD)')
     plt.legend()
