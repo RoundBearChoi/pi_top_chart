@@ -32,9 +32,9 @@ def run():
     # Plot the closing price and the moving average
     plt.style.use ('fivethirtyeight')
     plt.figure(figsize=(14, 7))
-    plt.plot(btc['Close'], label='Bitcoin', color='darkslategray', linewidth=0.3)
+    plt.plot(btc['Close'], label='Bitcoin', color='darkgray', linewidth=0.5)
     plt.plot(btc[str(slow) + '_MA'], label=str(slow) + '-day MA', color='crimson', linewidth=0.7)
-    plt.plot(btc[str(quick) + '_MA'], label=str(quick) + '-day MA', color='forestgreen', linewidth=0.7)
+    plt.plot(btc[str(quick) + '_MA'], label=str(quick) + '-day MA', color='forestgreen', linewidth=0.9)
     plt.title('BTC Moving Averages')
     plt.xlabel('Date')
     plt.ylabel('Price (USD)')
