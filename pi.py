@@ -8,6 +8,8 @@ from datetime import date
 
 
 def run():
+    print("Hi..")
+
     today = date.today()
     btc = yf.download('BTC-USD', start='2016-01-01', end=today)
 
