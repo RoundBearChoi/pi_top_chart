@@ -9,7 +9,7 @@ from datetime import date
 
 def run():
     today = date.today()
-    btc = yf.download('BTC-USD', start='2015-01-01', end=today)
+    btc = yf.download('BTC-USD', start='2016-01-01', end=today)
 
     # Calculate the moving averages
     slow = 360
