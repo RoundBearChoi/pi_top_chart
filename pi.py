@@ -33,7 +33,7 @@ def run():
         log.info('Color name: %s, RGB value: %s', color_name, colors[color_name])
 
     # Plot the closing price and the moving average
-    plt.style.use ('ggplot')
+    plt.style.use('ggplot')
     plt.figure(figsize=(14, 7))
     plt.plot(btc[str(slow) + '_MA'], label=str(slow) + '-day MA', linewidth=0.8)
     plt.plot(btc[str(quick) + '_MA'], label=str(quick) + '-day MA', linewidth=0.8)
